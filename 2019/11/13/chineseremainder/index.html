@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>中国剩余定理-信息安全数学基础实验 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: chineseremainderdate: 2019-11-13 00:05:08tags: [信安数基，中国剩余定理]categories: number theorydescription: 中国剩余定理求解同余方程组    软件逆向工程 - dll消息钩取 problem中国剩余定理求解同余方程组   environment: C++ vs2017 mircal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国剩余定理-信息安全数学基础实验">
+<meta property="og:url" content="http://yoursite.com/2019/11/13/chineseremainder/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: chineseremainderdate: 2019-11-13 00:05:08tags: [信安数基，中国剩余定理]categories: number theorydescription: 中国剩余定理求解同余方程组    软件逆向工程 - dll消息钩取 problem中国剩余定理求解同余方程组   environment: C++ vs2017 mircal">
+<meta property="og:locale" content="en# ��վʹ�õ�����">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027232515911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027233517474.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027232721389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027232745655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027232904679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027234515762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027234523375.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027234530802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027234621273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191027234705687.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-11-12T16:10:38.103Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中国剩余定理-信息安全数学基础实验">
+<meta name="twitter:description" content="title: chineseremainderdate: 2019-11-13 00:05:08tags: [信安数基，中国剩余定理]categories: number theorydescription: 中国剩余定理求解同余方程组    软件逆向工程 - dll消息钩取 problem中国剩余定理求解同余方程组   environment: C++ vs2017 mircal">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191027232515911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-chineseremainder" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/13/chineseremainder/" class="article-date">
+  <time datetime="2019-11-12T16:05:08.000Z" itemprop="datePublished">2019-11-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      中国剩余定理-信息安全数学基础实验
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: chineseremainder<br>date: 2019-11-13 00:05:08<br>tags: [信安数基，中国剩余定理]<br>categories: number theory<br>description: 中国剩余定理求解同余方程组</p>
+<hr>
+<!--
+---
+title: postName #文章页面上的显示名称，一般是中文
+date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
+categories: 默认分类 #分类
+tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格
+description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
+---
+
+以下是正文
+-->
+
+<h1 id="软件逆向工程-dll消息钩取"><a href="#软件逆向工程-dll消息钩取" class="headerlink" title="软件逆向工程 - dll消息钩取"></a>软件逆向工程 - dll消息钩取</h1><blockquote>
+<p>problem<br>中国剩余定理求解同余方程组</p>
+</blockquote>
+<blockquote>
+<p>environment: C++ vs2017 mircal</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>中国剩余定理求解同余方程组<br><img src="https://img-blog.csdnimg.cn/20191027232515911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191027233517474.png" alt="在这里插入图片描述"></p>
+<h3 id="求解流程"><a href="#求解流程" class="headerlink" title="求解流程"></a>求解流程</h3><p><img src="https://img-blog.csdnimg.cn/20191027232721389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>流程图<br><img src="https://img-blog.csdnimg.cn/20191027232745655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p><img src="https://img-blog.csdnimg.cn/20191027232904679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>比如这个例子里<br>三个方程</p>
+<ol>
+<li>a分别为2 3 2 </li>
+<li>m分别为3 5 7</li>
+<li>先判断是否互质 这个不用说了吧 3 5 7</li>
+<li>然后分别计算M M-1 </li>
+<li>最后求解X</li>
+</ol>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>环境 win10 vs2017 mircal库 c语言</p>
+<p>输入： txt 三个方程组 前三行分别为a1 a2 a3 后三行为m1 m2 m3<br>输出 ： m不互质不能计算 OR 计算 出 X</p>
+<p>mircal库的使用在其他博客计算</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//miracl</span></span><br><span class="line"><span class="comment">//实现中国剩余定理 </span></span><br><span class="line"><span class="comment">//输入格式 txt 3个a 3个m 分行</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"miracl.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"mirdef.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">	big a[<span class="number">3</span>], m[<span class="number">3</span>], x[<span class="number">3</span>], m1[<span class="number">3</span>], m2[<span class="number">3</span>];</span><br><span class="line">	big c0, c1,c2,c3,c4,c5,c6,answer, M,W,X;</span><br><span class="line">	miracl *mip = mirsys(<span class="number">5000</span>, <span class="number">10</span>);  <span class="comment">//5000个十进制  500长的时候求逆元会报错因为超过500了</span></span><br><span class="line">	mip-&gt;IOBASE = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">	FILE *fp;</span><br><span class="line">	<span class="keyword">char</span> strline[<span class="number">1024</span>];</span><br><span class="line">	<span class="keyword">char</span> filename[] = <span class="string">"14.txt"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = mirvar(<span class="number">0</span>); <span class="comment">//a</span></span><br><span class="line">		m[i] = mirvar(<span class="number">0</span>);  <span class="comment">//m</span></span><br><span class="line">		x[i] = mirvar(<span class="number">0</span>);</span><br><span class="line">		m1[i] = mirvar(<span class="number">0</span>);  <span class="comment">//M</span></span><br><span class="line">		m2[i] = mirvar(<span class="number">0</span>);  <span class="comment">//M-1</span></span><br><span class="line">	&#125;</span><br><span class="line">	c0 = mirvar(<span class="number">0</span>);  <span class="comment">//0  辅助参数</span></span><br><span class="line">	c1 = mirvar(<span class="number">1</span>);  <span class="comment">//1</span></span><br><span class="line">	c2 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">	c3 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">	c4 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">	c5 = mirvar(<span class="number">1</span>);   <span class="comment">//1</span></span><br><span class="line">	c6 = mirvar(<span class="number">1</span>);   <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line">	answer = mirvar(<span class="number">0</span>);</span><br><span class="line">	M  = mirvar(<span class="number">1</span>);</span><br><span class="line">	W = mirvar(<span class="number">1</span>);</span><br><span class="line">	X = mirvar(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//打开文件</span></span><br><span class="line">	<span class="keyword">if</span> ((fp = fopen(filename, <span class="string">"r"</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"input:\n"</span>);</span><br><span class="line">	<span class="comment">//读取a与m</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fgets(strline, <span class="number">1024</span>, fp);</span><br><span class="line">		cinstr(a[i], strline);</span><br><span class="line">		cotnum(a[i], <span class="built_in">stdout</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fgets(strline, <span class="number">1024</span>, fp);</span><br><span class="line">		cinstr(m[i], strline);</span><br><span class="line">		cotnum(m[i], <span class="built_in">stdout</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	fclose(fp);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//判断是否能用中国剩余定理</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = i+<span class="number">1</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			egcd(m[i], m[j], c0);<span class="comment">//c0为最大公约数</span></span><br><span class="line">			<span class="keyword">if</span> (compare(c0, c1) &lt;= <span class="number">0</span>)  <span class="comment">//互质</span></span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"m不互质，不能直接应用中国剩余定理\n"</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"test ok\n"</span>);</span><br><span class="line">	<span class="comment">//计算m =m1*m2*m3</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		multiply(m[i], M, M); <span class="comment">//m =m1*m2*m3</span></span><br><span class="line">	&#125;</span><br><span class="line">	copy(M, W);  <span class="comment">//转存</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		divide(M, m[i], m1[i]); <span class="comment">// M =  m/mj</span></span><br><span class="line">		<span class="comment">//printf("div\n");</span></span><br><span class="line">		xgcd(m1[i], m[i], m2[i], c4, c6); <span class="comment">//MM-1 = 1 mod m</span></span><br><span class="line">		<span class="comment">//printf("xgcd\n");</span></span><br><span class="line">		copy(W, M);  <span class="comment">//</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//计算X</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		multiply(m1[i], m2[i], c3);</span><br><span class="line">		multiply(c3, a[i], x[i]);  <span class="comment">//x = MM-1a +....mod(m)</span></span><br><span class="line">		add(x[i], X, X);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	powmod(X, c5, M, answer);<span class="comment">//answer = X^1 mod M</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"answer is:\n"</span>);</span><br><span class="line">	cotnum(answer, <span class="built_in">stdout</span>); <span class="comment">//打印</span></span><br><span class="line">	mirexit();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><p>判断是否能使用中国剩余定理<br> <img src="https://img-blog.csdnimg.cn/20191027234515762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>求M与M-1<br> <img src="https://img-blog.csdnimg.cn/20191027234523375.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>求解x<br> <img src="https://img-blog.csdnimg.cn/20191027234530802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="实际运行"><a href="#实际运行" class="headerlink" title="实际运行"></a>实际运行</h3><ol>
+<li>互质的<br><img src="https://img-blog.csdnimg.cn/20191027234621273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><ol start="2">
+<li>可以使用中国剩余定理</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20191027234705687.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="P-S-txt数据"><a href="#P-S-txt数据" class="headerlink" title="P.S. txt数据"></a>P.S. txt数据</h3><p>1.txt 不互质</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1703400778910483820422805008255510202952780108580687282406204991102977355497819362037336119731002913846662180847077020740236290693493738835482271882051497287782803150523222405080338334271801792866482004568188646373815031989672512987923656390452397739</span><br><span class="line">2724305591776277437698018538336328525368755596343722369278379045862095348399405909803531445622923586434858075923794289199772931203020662107251938261421134535489303223863021432862007558144614961478557772158790865755237609603854734189485065702894533007</span><br><span class="line">5054062422109780731533257906013120348277952566924151532670827347964065027024283070553070224352222147708139041781535542580186174743209933967784491580267630649415317930613025621277091068103021482556687957739478553608686399952265973926562315865941811106</span><br><span class="line">529012089683106027540972464242844528071743673743373492337127252712791226562406546874415951553948390892712915241165589135143177845694531817071616643290537045923226008758702728170159550568805907850622424020015265726841001559668865110779486144192282420641364473883446730980837401121533551908678272444684</span><br><span class="line">543215757827618377203473258275047104979822158102404878687148537849799550247381564365578590422056394278257158069356234349542268988578552880243969652244111766224512688426426706878276641902193985933655384799228976467016700686667749302166453794272633505983640121880738193066243430412939374407346361018673</span><br><span class="line">910409201715205002347478646685130446423660152260507358434979331439581396068284694915012061028789908792252336550127518559297299352963181057834931040933258962452367236215393076418627949218921266472636232832254258117915197059091231844804196176368468920201615703783443596364327788081668519651744410101292</span><br></pre></td></tr></table></figure>
+
+<p>2.txt 可求结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">8695039453824585971327803091640327439264591005655488011745393293145693657952152999306407259261770227769126705900977747911851437578989508123510979745347100821709337665424897266934977753636498274478498325810960608950295083895917256121194946489862590531</span><br><span class="line">2843586888776659243226129768596946248650199985912875849363349934062940237054802099741704753655572936241294947678141581242450053030988467105995226180947812728014932325811696214659355368088498823535203466513124053882630083938669706033914334272897725827</span><br><span class="line">7823172232329967143253080336216473133559059471949452135263320655253223177876623709115617602222829735561588048570850030793579858516821809715240795109686396100253463538575629486987673937099056108251105593664390258183737270501095307514377495715221620851</span><br><span class="line">116017853623276268534139398907929878877787793651980551492831128460152265817955210396589291631422367361262415115121837412178585592287169858210020969161771830842579745360462792019608011639872984330943977063269966943474772865114131255717447905531474229802532044068660360456893054575436566915238490309883</span><br><span class="line">512447157769228304131256323740835904819759921673225154827094436771226096325013237418054628602994336075764089916228418424306832707597853204209771112842072708289338794604081011427030629039302332957025365167149233660135959038245478352895374943727331531173885009715832998171386546136367093686989913049831</span><br><span class="line">969850455230698192652261474515788687418941545125366868561633605148672698351493104516166153304063487537678627945130392397105464048856577407056079471349982831692582998623711436409450154130174976181809303563157487873504380599234293660083773732553256060917095555110841495582128346683005794423459984157739</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/13/chineseremainder/" data-id="ck2w214d6000c30uuli6orbo8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/13/crypto-exper1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          crypto_exper1 现代密码学实验一
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/12/dllhook/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">dllhook</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/cryptography/">cryptography</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/experimet/">experimet</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reverse/">reverse</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography-experiment-homework/">cryptography experiment homework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll，逆向/">dll，逆向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cryptography-experiment-homework/" style="font-size: 10px;">cryptography experiment homework</a> <a href="/tags/dll，逆向/" style="font-size: 10px;">dll，逆向</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/13/crypto-exper1/">crypto_exper1 现代密码学实验一</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/13/chineseremainder/">中国剩余定理-信息安全数学基础实验</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/12/dllhook/">dllhook</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/16/cryptogray-experiment-week1/">cryptogray experiment week1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/java9-3/">java9.3</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kmm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
