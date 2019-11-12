@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>dllhook | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="软件逆向工程">
+<meta name="keywords" content="dll，逆向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dllhook">
+<meta property="og:url" content="http://yoursite.com/2019/11/12/dllhook/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="软件逆向工程">
+<meta property="og:locale" content="en# ��վʹ�õ�����">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191112235518501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191112235921597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191112235930903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-11-12T16:03:32.208Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dllhook">
+<meta name="twitter:description" content="软件逆向工程">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191112235518501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-dllhook" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/12/dllhook/" class="article-date">
+  <time datetime="2019-11-12T14:58:04.000Z" itemprop="datePublished">2019-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/reverse/">reverse</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      dllhook
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!--
+---
+title: postName #文章页面上的显示名称，一般是中文
+date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
+categories: 默认分类 #分类
+tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格
+description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
+---
+
+以下是正文
+-->
+
+<h1 id="软件逆向工程-dll消息钩取"><a href="#软件逆向工程-dll消息钩取" class="headerlink" title="软件逆向工程 - dll消息钩取"></a>软件逆向工程 - dll消息钩取</h1><blockquote>
+<p>problem<br>钩取对notepad的输入</p>
+</blockquote>
+<p>solution: C++ vs2017</p>
+<a id="more"></a>
+
+<p>@<a href="软件逆向工程-dll消息钩取">TOC</a></p>
+<h1 id="DLL注入实验-dll消息钩取HOOK"><a href="#DLL注入实验-dll消息钩取HOOK" class="headerlink" title="DLL注入实验-dll消息钩取HOOK"></a>DLL注入实验-dll消息钩取HOOK</h1><h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><blockquote>
+<p>修改改HookDll.cpp，钩取对notepad的输入，使得：<br>a)输入文本仍能正常显示<br>b)所有输入文本能够记录到input.txt文件中</p>
+</blockquote>
+<h3 id="HookDll-cpp"><a href="#HookDll-cpp" class="headerlink" title="HookDll.cpp"></a>HookDll.cpp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"windows.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"tchar.h"</span></span></span><br><span class="line"></span><br><span class="line">HINSTANCE g_hInstance = <span class="literal">NULL</span>;</span><br><span class="line">HHOOK g_hHook = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">BOOL WINAPI <span class="title">DllMain</span><span class="params">(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved)</span></span>&#123;</span><br><span class="line">	<span class="keyword">switch</span>( dwReason )&#123;</span><br><span class="line">        <span class="keyword">case</span> DLL_PROCESS_ATTACH:</span><br><span class="line">			g_hInstance = hinstDLL;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> TRUE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">KeyboardProc</span><span class="params">(<span class="keyword">int</span> nCode, WPARAM wParam, LPARAM lParam)</span></span>&#123;</span><br><span class="line">	TCHAR szPath[MAX_PATH] = &#123;<span class="number">0</span>,&#125;;</span><br><span class="line">	TCHAR *p = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>( nCode &gt;= <span class="number">0</span> ) &#123;</span><br><span class="line">		<span class="keyword">if</span>( !(lParam &amp; <span class="number">0x80000000</span>) )&#123; <span class="comment">//lParam的第31位（0：按键；1：释放键）</span></span><br><span class="line">			GetModuleFileName(<span class="literal">NULL</span>, szPath, MAX_PATH);</span><br><span class="line">			p = _tcsrchr(szPath, _T(<span class="string">'\\'</span>));</span><br><span class="line">            <span class="comment">//若装载当前DLL的进程为notepad.exe，则消息不会传递给下一个钩子</span></span><br><span class="line">			<span class="keyword">if</span>( !lstrcmpi(p + <span class="number">1</span>, _T(<span class="string">"notepad.exe"</span>)) )</span><br><span class="line">				<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">// 当前进程不是notepad.exe，将消息传递给下一个钩子</span></span><br><span class="line">	<span class="keyword">return</span> CallNextHookEx(g_hHook, nCode, wParam, lParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	__declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">HkStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		g_hHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, g_hInstance, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	__declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">HkStop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>( g_hHook ) &#123;</span><br><span class="line">			UnhookWindowsHookEx(g_hHook);</span><br><span class="line">			g_hHook = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>j使用vs2017编译生成dll，程序作用：钩取notepad（记事本）的消息输入。不过这是notepad不能正常输入，也不能记录钩取的数据，关键代码都有注释。</p>
+</blockquote>
+<blockquote>
+<p>OS消息队列和应用程序消息队列之间存在一条钩链（Hook Chain），设置好键盘消息钩子后，处于钩链中的键盘消息钩子会比应用程序先一步看到相应信息。在键盘消息钩子函数的内部，除了可以查看消息之外，还可以修改消息本身，而且还能对消息实施拦截，阻止消息传递。可以同时设置多个相同的键盘消息钩子，按照设置的顺序依次调用，从而组成的链条称为钩链。<br><img src="https://img-blog.csdnimg.cn/20191112235518501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</blockquote>
+<h3 id="TsetHook-cpp"><a href="#TsetHook-cpp" class="headerlink" title="TsetHook.cpp"></a>TsetHook.cpp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"windows.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"tchar.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*PFN_HOOKSTART)</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*PFN_HOOKSTOP)</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> _tmain(<span class="keyword">int</span> argc, TCHAR* argv[]) &#123;</span><br><span class="line">	HMODULE	hDll = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">if</span>( (hDll = LoadLibraryA(<span class="string">"HookDll.dll"</span>)) == <span class="literal">NULL</span> )<span class="comment">// 装载HookDll.dll</span></span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取导出函数HkStart()和HkStop()的地址</span></span><br><span class="line">	PFN_HOOKSTART HookStart = (PFN_HOOKSTART)GetProcAddress(hDll, <span class="string">"HkStart"</span>);</span><br><span class="line">	PFN_HOOKSTOP HookStop = (PFN_HOOKSTOP)GetProcAddress(hDll, <span class="string">"HkStop"</span>);</span><br><span class="line"></span><br><span class="line">	HookStart(); <span class="comment">//开始钩取键盘消息</span></span><br><span class="line">	_tprintf(_T(<span class="string">"press 'q' to quit!\n"</span>));</span><br><span class="line">	<span class="keyword">while</span>( getchar() != <span class="string">'q'</span> ); <span class="comment">// 等到用户输入'q'才终止钩取</span></span><br><span class="line">	HookStop(); <span class="comment">//终止钩取键盘消息</span></span><br><span class="line">	FreeLibrary(hDll); <span class="comment">//卸载HookDll.dll</span></span><br><span class="line">	<span class="keyword">return</span> TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中TestDll主要是进行HookDll.dll的装载与卸载，获取HkStart HkStop的地址，并且使用q来判断用户输入是否终止。</p>
+</blockquote>
+<h2 id="修改dll实现功能"><a href="#修改dll实现功能" class="headerlink" title="修改dll实现功能"></a>修改dll实现功能</h2><h3 id="CODE-C"><a href="#CODE-C" class="headerlink" title="CODE C++"></a>CODE C++</h3> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。   //hookdll1 钩取notepad的输入 同时不影响正常输入 并把输入保存到指定的txt</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"windows.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"tchar.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">HINSTANCE g_hInstance = <span class="literal">NULL</span>;</span><br><span class="line">HHOOK g_hHook = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//dllmain</span></span><br><span class="line"><span class="function">BOOL WINAPI <span class="title">DllMain</span><span class="params">(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">switch</span> (dwReason) &#123;</span><br><span class="line">	<span class="comment">//当DLLMain处理DLL_PROCESS_ATTACH时，DLLMain函数的返回值表示DLL的初始化是否成功。成功返回TRUE，否则返回FALSE。</span></span><br><span class="line">	<span class="keyword">case</span> DLL_PROCESS_ATTACH:</span><br><span class="line">		g_hInstance = hinstDLL;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> TRUE;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//keyboardproc</span></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">KeyboardProc</span><span class="params">(<span class="keyword">int</span> nCode, WPARAM wParam, LPARAM lParam)</span> </span>&#123;</span><br><span class="line">	TCHAR szPath[MAX_PATH] = &#123; <span class="number">0</span>, &#125;;</span><br><span class="line">	TCHAR *p = <span class="literal">NULL</span>;</span><br><span class="line">	FILE *fp = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fp = fopen(<span class="string">"C:test\\input.txt"</span>, <span class="string">"a+"</span>))==<span class="literal">NULL</span>) &#123;<span class="comment">//保存输入的txt</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"open txt error"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (nCode &gt;= <span class="number">0</span>) &#123;<span class="comment">//nCode 钩子识别码</span></span><br><span class="line">		<span class="keyword">if</span> (!(lParam &amp; <span class="number">0x80000000</span>)) &#123; <span class="comment">//lParam的第31位（0：按键；1：释放键）</span></span><br><span class="line">			GetModuleFileName(<span class="literal">NULL</span>, szPath, MAX_PATH);</span><br><span class="line">			p = _tcsrchr(szPath, _T(<span class="string">'\\'</span>));<span class="comment">//当前路径\\后的内容（notepad.exe)</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">//若装载当前DLL的进程为notepad.exe</span></span><br><span class="line">			<span class="keyword">if</span> (!lstrcmpi(p + <span class="number">1</span>, _T(<span class="string">"notepad.exe"</span>)))<span class="comment">//为notepad程序</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">char</span> c = wParam;<span class="comment">//获取消息</span></span><br><span class="line">				fwrite(&amp;c, <span class="number">1</span>, <span class="number">1</span>, fp);<span class="comment">//一字节一元素写入</span></span><br><span class="line">				CallNextHookEx(g_hHook, nCode, wParam, lParam);<span class="comment">//使文字正常输入</span></span><br><span class="line">				<span class="comment">//return 1;//这个要注释掉</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		fclose(fp);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 当前进程不是notepad.exe，将消息传递给下一个钩子</span></span><br><span class="line">	<span class="keyword">return</span> CallNextHookEx(g_hHook, nCode, wParam, lParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	__declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">HkStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		g_hHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, g_hInstance, <span class="number">0</span>);<span class="comment">//sethook开启</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	__declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">HkStop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (g_hHook) &#123;</span><br><span class="line">			UnhookWindowsHookEx(g_hHook);<span class="comment">//unhook关闭</span></span><br><span class="line">			g_hHook = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p><img src="https://img-blog.csdnimg.cn/20191112235921597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191112235930903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>PS 关于vs如何使用ddl 参考<a href="https://blog.csdn.net/qq_37902078/article/details/80144696" target="_blank" rel="noopener">https://blog.csdn.net/qq_37902078/article/details/80144696</a><br>windows钩取 <a href="https://blog.csdn.net/SKI_12/article/details/80684358" target="_blank" rel="noopener">https://blog.csdn.net/SKI_12/article/details/80684358</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/12/dllhook/" data-id="ck2w1p8fl00085wuu7i1zwjrj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dll，逆向/">dll，逆向</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/16/cryptogray-experiment-week1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">cryptogray experiment week1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/experimet/">experimet</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reverse/">reverse</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography-experiment-homework/">cryptography experiment homework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll，逆向/">dll，逆向</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cryptography-experiment-homework/" style="font-size: 10px;">cryptography experiment homework</a> <a href="/tags/dll，逆向/" style="font-size: 10px;">dll，逆向</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/12/dllhook/">dllhook</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/16/cryptogray-experiment-week1/">cryptogray experiment week1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/java9-3/">java9.3</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/java8-28/">java8.28</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/26/firstblog/">firstblog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kmm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
