@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
+  
+  <title>crypto_exper1 现代密码学实验一 - Hexo</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
   
 
-  
-  <title>crypto_exper1 现代密码学实验一 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
   <meta name="description" content="现代密码学实验一">
 <meta name="keywords" content="cryptography,python">
 <meta property="og:type" content="article">
@@ -21,79 +25,176 @@
 <meta name="twitter:title" content="crypto_exper1 现代密码学实验一">
 <meta name="twitter:description" content="现代密码学实验一">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191020012359251.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1573615481330">
 </head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="kmm" class="mdui-btn mdui-btn-icon"><img src="/images/avatar.png"></a>
+       </div>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-crypto-exper1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/13/crypto-exper1/" class="article-date">
-  <time datetime="2019-11-12T16:09:02.000Z" itemprop="datePublished">2019-11-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/cryptography/">cryptography</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="kmm">
+            <img src="/images/avatar.png" alt="kmm">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>9</div>
+        <div><span>Tags</span>5</div>
+        <div><span>Categories</span>4</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
   
-    <h1 class="article-title" itemprop="name">
-      crypto_exper1 现代密码学实验一
-    </h1>
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
   
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
 
-      </header>
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/cryptography/">cryptography</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/java/">java</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/number-theory/">number theory</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/reverse/">reverse</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tagcloud</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/cryptography/" style="font-size: 20px;">cryptography</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/信安数基，中国剩余定理/" style="font-size: 10px;">信安数基，中国剩余定理</a>
+    </div>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!--
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 kmm
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        
+        <h1>crypto_exper1 现代密码学实验一</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月13日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 14 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/cryptography/">cryptography</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/cryptography/">cryptography</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/python/">python</a>
+    
+  </div>
+  <article>
+    <!--
 ---
 title: postName #文章页面上的显示名称，一般是中文
 date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
@@ -161,147 +262,66 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"6.txt"</span>,<span class="string">"r"</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    wenben=[base64.b64decode(i) <span class="keyword">for</span> i <span class="keyword">in</span> fp.readlines()]</span><br><span class="line">wenben=<span class="string">""</span>.join(wenben)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">english_test</span><span class="params">(sentence)</span>:</span><span class="comment">#字母频率</span></span><br><span class="line">    score = <span class="number">0</span></span><br><span class="line">    freqs = &#123;</span><br><span class="line">        <span class="string">'a'</span>: <span class="number">0.0651738</span>, <span class="string">'b'</span>: <span class="number">0.0124248</span>, <span class="string">'c'</span>: <span class="number">0.0217339</span>,</span><br><span class="line">        <span class="string">'d'</span>: <span class="number">0.0349835</span>, <span class="string">'e'</span>: <span class="number">0.1041442</span>, <span class="string">'f'</span>: <span class="number">0.0197881</span>,</span><br><span class="line">        <span class="string">'g'</span>: <span class="number">0.0158610</span>, <span class="string">'h'</span>: <span class="number">0.0492888</span>, <span class="string">'i'</span>: <span class="number">0.0558094</span>,</span><br><span class="line">        <span class="string">'j'</span>: <span class="number">0.0009033</span>, <span class="string">'k'</span>: <span class="number">0.0050529</span>, <span class="string">'l'</span>: <span class="number">0.0331490</span>,</span><br><span class="line">        <span class="string">'m'</span>: <span class="number">0.0202124</span>, <span class="string">'n'</span>: <span class="number">0.0564513</span>, <span class="string">'o'</span>: <span class="number">0.0596302</span>,</span><br><span class="line">        <span class="string">'p'</span>: <span class="number">0.0137645</span>, <span class="string">'q'</span>: <span class="number">0.0008606</span>, <span class="string">'r'</span>: <span class="number">0.0497563</span>,</span><br><span class="line">        <span class="string">'s'</span>: <span class="number">0.0515760</span>, <span class="string">'t'</span>: <span class="number">0.0729357</span>, <span class="string">'u'</span>: <span class="number">0.0225134</span>,</span><br><span class="line">        <span class="string">'v'</span>: <span class="number">0.0082903</span>, <span class="string">'w'</span>: <span class="number">0.0171272</span>, <span class="string">'x'</span>: <span class="number">0.0013692</span>,</span><br><span class="line">        <span class="string">'y'</span>: <span class="number">0.0145984</span>, <span class="string">'z'</span>: <span class="number">0.0007836</span>, <span class="string">' '</span>: <span class="number">0.1918182</span>&#125;</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> sentence.lower():</span><br><span class="line">        <span class="keyword">if</span> x <span class="keyword">in</span> freqs:</span><br><span class="line">            score += freqs[x]</span><br><span class="line">    <span class="keyword">return</span> score</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanming</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    num=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(x)):</span><br><span class="line">        t=ord(x[i])^ord(y[i])</span><br><span class="line">        <span class="keyword">while</span> t:</span><br><span class="line">        <span class="keyword">if</span> t&amp;<span class="number">1</span> : num+=<span class="number">1</span></span><br><span class="line">        t&gt;&gt;=<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> num</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">thechar</span><span class="params">(st1)</span>:</span></span><br><span class="line">    score = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">255</span>):</span><br><span class="line">        tmp = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,len(st1)):  <span class="comment"># 任意两个字符的字符串</span></span><br><span class="line">            tmp += chr(i ^ int(st1[j],<span class="number">16</span>))</span><br><span class="line">        tmpstr = <span class="string">""</span>.join(tmp)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#num=len(re.findall(r'[a-zA-Z ,\.;?!:]',tmpstr))  #'[a-zA-Z ,\.?!:;]'</span></span><br><span class="line">        num=english_test(tmpstr)</span><br><span class="line">        <span class="keyword">if</span> num &gt; score:</span><br><span class="line">            score = num  <span class="comment"># 用于更新用</span></span><br><span class="line">            key = chr(i)</span><br><span class="line">            <span class="comment">#print key,score</span></span><br><span class="line">    <span class="keyword">return</span> key</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ans = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">41</span>):</span><br><span class="line">    str1=[]</span><br><span class="line">    str2=[]</span><br><span class="line">    str3=[]</span><br><span class="line">    str4=[]</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,i): str1+=[wenben[j]]</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i,<span class="number">2</span>*i): str2+=[wenben[j]]</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>*i,<span class="number">3</span>*i): str3+=[wenben[j]]</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">3</span>*i,<span class="number">4</span>*i): str4+=[wenben[j]]</span><br><span class="line">    str1=<span class="string">""</span>.join(str1)</span><br><span class="line">    str2=<span class="string">""</span>.join(str2)</span><br><span class="line">    str3=<span class="string">""</span>.join(str3)</span><br><span class="line">    str4=<span class="string">""</span>.join(str4)</span><br><span class="line">    x1=float(hanming(str1,str2))/i</span><br><span class="line">    x2=float(hanming(str2,str3))/i</span><br><span class="line">    x3=float(hanming(str3,str4))/i</span><br><span class="line">    x4=float(hanming(str1,str4))/i</span><br><span class="line">    x5=float(hanming(str1,str3))/i</span><br><span class="line">    x6=float(hanming(str2,str4))/i</span><br><span class="line">    aa=(x1+x2+x3+x4+x5+x6)/<span class="number">6</span></span><br><span class="line">    ans+=[(i,aa)]</span><br><span class="line">ans.sort(<span class="keyword">lambda</span> x,y:cmp(x[<span class="number">1</span>],y[<span class="number">1</span>]))</span><br><span class="line"><span class="comment">#print "hello\n"</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(ans)):</span><br><span class="line">    <span class="keyword">print</span> ans[i][<span class="number">0</span>],ans[i][<span class="number">1</span>]</span><br><span class="line"><span class="comment">#print len(wenben)</span></span><br><span class="line"><span class="comment">#print len(wenben)%29</span></span><br><span class="line">wenben=wenben.encode(<span class="string">'hex'</span>)</span><br><span class="line"></span><br><span class="line">block=[re.findall(<span class="string">r'(.&#123;2&#125;)'</span>,z)  <span class="keyword">for</span> z <span class="keyword">in</span> re.findall(<span class="string">r'(.&#123;58&#125;)'</span>,wenben)]<span class="comment">#29</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">keyy = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">29</span>):</span><br><span class="line">    tmp=[]</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,len(block)):</span><br><span class="line">        tmp+=[block[j][i]]</span><br><span class="line">    keyy+=[thechar(tmp)]</span><br><span class="line">keyy=<span class="string">""</span>.join(keyy)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"hello\n"</span></span><br><span class="line"><span class="keyword">print</span> keyy</span><br><span class="line"><span class="keyword">print</span> <span class="string">"hello\n"</span></span><br><span class="line">keyy=keyy*<span class="number">10000</span></span><br><span class="line"></span><br><span class="line">wenben=wenben.decode(<span class="string">'hex'</span>)</span><br><span class="line">an=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(wenben)):</span><br><span class="line">    an+=[chr(ord(wenben[i])^ord(keyy[i]))]</span><br><span class="line">an=<span class="string">""</span>.join(an)</span><br><span class="line"><span class="keyword">print</span> an</span><br></pre></td></tr></table></figure>
 
 <h4 id="4-keyboard"><a href="#4-keyboard" class="headerlink" title="4 keyboard"></a>4 keyboard</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _*_ coding:utf-8 _*_</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">@author km</span></span><br><span class="line"><span class="string">@time: 2019/10/18 11:34</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment">#暴力破解</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">starttime = datetime.datetime.now()</span><br><span class="line">hash1=<span class="string">"67ae1a64661ac8b4494666f58c4822408dd0a3e4"</span></span><br><span class="line">str1=<span class="string">"QqWw%58(=0Ii*+nN"</span></span><br><span class="line">str2=[[<span class="string">'Q'</span>, <span class="string">'q'</span>],[ <span class="string">'W'</span>, <span class="string">'w'</span>],[ <span class="string">'%'</span>, <span class="string">'5'</span>], [<span class="string">'8'</span>, <span class="string">'('</span>],[ <span class="string">'='</span>, <span class="string">'0'</span>], [<span class="string">'I'</span>, <span class="string">'i'</span>], [<span class="string">'*'</span>, <span class="string">'+'</span>], [<span class="string">'n'</span>, <span class="string">'N'</span>]]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sha_encrypt</span><span class="params">(str)</span>:</span></span><br><span class="line">    sha = hashlib.sha1(str)</span><br><span class="line">    encrypts = sha.hexdigest()</span><br><span class="line">    <span class="keyword">return</span> encrypts</span><br><span class="line">st3=<span class="string">"0"</span>*<span class="number">8</span></span><br><span class="line">str4=<span class="string">""</span></span><br><span class="line">str3=list(st3)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">    str3[<span class="number">0</span>]=str2[<span class="number">0</span>][a]</span><br><span class="line">    <span class="keyword">for</span> b <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">        str3[<span class="number">1</span>]=str2[<span class="number">1</span>][b]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">            str3[<span class="number">2</span>]=str2[<span class="number">2</span>][c]</span><br><span class="line">            <span class="keyword">for</span> d <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">            str3[<span class="number">3</span>] = str2[<span class="number">3</span>][d]</span><br><span class="line">            <span class="keyword">for</span> e <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">                str3[<span class="number">4</span>] = str2[<span class="number">4</span>][e]</span><br><span class="line">                <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">                    str3[<span class="number">5</span>] = str2[<span class="number">5</span>][f]</span><br><span class="line">                    <span class="keyword">for</span> g <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">                        str3[<span class="number">6</span>] = str2[<span class="number">6</span>][g]</span><br><span class="line">                        <span class="keyword">for</span> h <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">2</span>):</span><br><span class="line">                            str3[<span class="number">7</span>] = str2[<span class="number">7</span>][h]</span><br><span class="line">                            newS=<span class="string">""</span>.join(str3)</span><br><span class="line">                            <span class="keyword">for</span> i <span class="keyword">in</span> itertools.permutations(newS, <span class="number">8</span>):</span><br><span class="line">                                str4 = sha_encrypt(<span class="string">""</span>.join(i))</span><br><span class="line">                                <span class="keyword">if</span> str4==hash1:</span><br><span class="line">                                    <span class="keyword">print</span> <span class="string">""</span>.join(i)</span><br><span class="line">                                    endtime = datetime.datetime.now()</span><br><span class="line">                                    <span class="keyword">print</span> (endtime - starttime).seconds</span><br><span class="line">                                    exit(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/13/crypto-exper1/" data-id="ck2wpqyza000shouul8p0zsrn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cryptography/">cryptography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
-  </div>
+  </article>
   
     
-<nav id="article-nav">
-  
-    <a href="/2019/11/13/testtheme1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          最近博客更换主题出现代码块混乱 代码可先看csdnblog https://blog.csdn.net/qq_41026219
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/11/13/chineseremainder/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">chineseremainder</div>
-    </a>
-  
-</nav>
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>kmm<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/11/13/crypto-exper1/" title="http://yoursite.com/2019/11/13/crypto-exper1/" target="_blank" rel="noopener">http://yoursite.com/2019/11/13/crypto-exper1/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
 
   
-</article>
-
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
 </section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/cryptography/">cryptography</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/number-theory/">number theory</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reverse/">reverse</a></li></ul>
+</div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1573615481342"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll/">dll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/信安数基，中国剩余定理/">信安数基，中国剩余定理</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/cryptography/" style="font-size: 20px;">cryptography</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/信安数基，中国剩余定理/" style="font-size: 10px;">信安数基，中国剩余定理</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/11/13/testtheme1/">最近博客更换主题出现代码块混乱 代码可先看csdnblog https://blog.csdn.net/qq_41026219</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/13/crypto-exper1/">crypto_exper1 现代密码学实验一</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/13/chineseremainder/">chineseremainder</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/12/dllhook/">dllhook</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/16/cryptogray-experiment-week1/">cryptogray experiment week1 PA1</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 kmm<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-  </div>
+
+
 </body>
+
 </html>
