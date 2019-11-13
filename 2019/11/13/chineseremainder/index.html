@@ -41,7 +41,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1573615481354">
+  <link rel="stylesheet" href="/css/style.css?v=1573616268193">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -193,7 +193,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月13日</a>
-    <a><i class="nexmoefont icon-areachart"></i>687 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>712 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/number-theory/">number theory</a>
@@ -236,8 +236,121 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
 <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>环境 win10 vs2017 mircal库 c语言</p>
 <p>输入： txt 三个方程组 前三行分别为a1 a2 a3 后三行为m1 m2 m3<br>输出 ： m不互质不能计算 OR 计算 出 X</p>
 <p>mircal库的使用在其他博客计算</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//miracl</span></span><br><span class="line"><span class="comment">//实现中国剩余定理 </span></span><br><span class="line"><span class="comment">//输入格式 txt 3个a 3个m 分行</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"miracl.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"mirdef.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">big a[<span class="number">3</span>], m[<span class="number">3</span>], x[<span class="number">3</span>], m1[<span class="number">3</span>], m2[<span class="number">3</span>];</span><br><span class="line">big c0, c1,c2,c3,c4,c5,c6,answer, M,W,X;</span><br><span class="line">miracl *mip = mirsys(<span class="number">5000</span>, <span class="number">10</span>);  <span class="comment">//5000个十进制  500长的时候求逆元会报错因为超过500了</span></span><br><span class="line">mip-&gt;IOBASE = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">char</span> strline[<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">char</span> filename[] = <span class="string">"14.txt"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">a[i] = mirvar(<span class="number">0</span>); <span class="comment">//a</span></span><br><span class="line">m[i] = mirvar(<span class="number">0</span>);  <span class="comment">//m</span></span><br><span class="line">x[i] = mirvar(<span class="number">0</span>);</span><br><span class="line">m1[i] = mirvar(<span class="number">0</span>);  <span class="comment">//M</span></span><br><span class="line">m2[i] = mirvar(<span class="number">0</span>);  <span class="comment">//M-1</span></span><br><span class="line">&#125;</span><br><span class="line">c0 = mirvar(<span class="number">0</span>);  <span class="comment">//0  辅助参数</span></span><br><span class="line">c1 = mirvar(<span class="number">1</span>);  <span class="comment">//1</span></span><br><span class="line">c2 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">c3 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">c4 = mirvar(<span class="number">0</span>);  <span class="comment">//0</span></span><br><span class="line">c5 = mirvar(<span class="number">1</span>);   <span class="comment">//1</span></span><br><span class="line">c6 = mirvar(<span class="number">1</span>);   <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line">answer = mirvar(<span class="number">0</span>);</span><br><span class="line">M  = mirvar(<span class="number">1</span>);</span><br><span class="line">W = mirvar(<span class="number">1</span>);</span><br><span class="line">X = mirvar(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//打开文件</span></span><br><span class="line"><span class="keyword">if</span> ((fp = fopen(filename, <span class="string">"r"</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"error"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input:\n"</span>);</span><br><span class="line"><span class="comment">//读取a与m</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">fgets(strline, <span class="number">1024</span>, fp);</span><br><span class="line">cinstr(a[i], strline);</span><br><span class="line">cotnum(a[i], <span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">fgets(strline, <span class="number">1024</span>, fp);</span><br><span class="line">cinstr(m[i], strline);</span><br><span class="line">cotnum(m[i], <span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">fclose(fp);</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断是否能用中国剩余定理</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (j = i+<span class="number">1</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">&#123;</span><br><span class="line">	egcd(m[i], m[j], c0);<span class="comment">//c0为最大公约数</span></span><br><span class="line">	<span class="keyword">if</span> (compare(c0, c1) &lt;= <span class="number">0</span>)  <span class="comment">//互质</span></span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"m不互质，不能直接应用中国剩余定理\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"test ok\n"</span>);</span><br><span class="line"><span class="comment">//计算m =m1*m2*m3</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">multiply(m[i], M, M); <span class="comment">//m =m1*m2*m3</span></span><br><span class="line">&#125;</span><br><span class="line">copy(M, W);  <span class="comment">//转存</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">divide(M, m[i], m1[i]); <span class="comment">// M =  m/mj</span></span><br><span class="line"><span class="comment">//printf("div\n");</span></span><br><span class="line">xgcd(m1[i], m[i], m2[i], c4, c6); <span class="comment">//MM-1 = 1 mod m</span></span><br><span class="line"><span class="comment">//printf("xgcd\n");</span></span><br><span class="line">copy(W, M);  <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//计算X</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">multiply(m1[i], m2[i], c3);</span><br><span class="line">multiply(c3, a[i], x[i]);  <span class="comment">//x = MM-1a +....mod(m)</span></span><br><span class="line">add(x[i], X, X);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">powmod(X, c5, M, answer);<span class="comment">//answer = X^1 mod M</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"answer is:\n"</span>);</span><br><span class="line">cotnum(answer, <span class="built_in">stdout</span>); <span class="comment">//打印</span></span><br><span class="line">mirexit();</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="c">//miracl
+//实现中国剩余定理 
+//输入格式 txt 3个a 3个m 分行
 
+
+#include&quot;miracl.h&quot;
+#include&quot;mirdef.h&quot;
+#include &lt;string.h&gt;
+#include&lt;stdio.h&gt;
+
+
+int main()
+{
+int i = 0;
+int j = 0;
+big a[3], m[3], x[3], m1[3], m2[3];
+big c0, c1,c2,c3,c4,c5,c6,answer, M,W,X;
+miracl *mip = mirsys(5000, 10);  //5000个十进制  500长的时候求逆元会报错因为超过500了
+mip-&gt;IOBASE = 10;
+
+FILE *fp;
+char strline[1024];
+char filename[] = &quot;14.txt&quot;;
+
+for(i = 0; i &lt; 3; i++)
+{
+a[i] = mirvar(0); //a
+m[i] = mirvar(0);  //m
+x[i] = mirvar(0);
+m1[i] = mirvar(0);  //M
+m2[i] = mirvar(0);  //M-1
+}
+c0 = mirvar(0);  //0  辅助参数
+c1 = mirvar(1);  //1
+c2 = mirvar(0);  //0
+c3 = mirvar(0);  //0
+c4 = mirvar(0);  //0
+c5 = mirvar(1);   //1
+c6 = mirvar(1);   //1
+
+answer = mirvar(0);
+M  = mirvar(1);
+W = mirvar(1);
+X = mirvar(0);
+
+//打开文件
+if ((fp = fopen(filename, &quot;r&quot;)) == NULL)
+{
+printf(&quot;error&quot;);
+return -1;
+}
+printf(&quot;input:\n&quot;);
+//读取a与m
+for (i = 0; i &lt; 3; i++)
+{
+fgets(strline, 1024, fp);
+cinstr(a[i], strline);
+cotnum(a[i], stdout);
+}
+
+for (i = 0; i &lt; 3; i++)
+{
+fgets(strline, 1024, fp);
+cinstr(m[i], strline);
+cotnum(m[i], stdout);
+}
+printf(&quot;\n&quot;);
+fclose(fp);
+
+//判断是否能用中国剩余定理
+for (i = 0; i &lt; 3; i++)
+{
+for (j = i+1; j &lt; 3; j++)
+{
+    egcd(m[i], m[j], c0);//c0为最大公约数
+    if (compare(c0, c1) &lt;= 0)  //互质
+        continue;
+    else {
+        printf(&quot;m不互质，不能直接应用中国剩余定理\n&quot;);
+        return -1;
+    }
+}    
+}
+printf(&quot;test ok\n&quot;);
+//计算m =m1*m2*m3
+for (i = 0; i &lt; 3; i++)
+{
+multiply(m[i], M, M); //m =m1*m2*m3
+}
+copy(M, W);  //转存
+
+for (i = 0; i &lt; 3; i++)
+{
+divide(M, m[i], m1[i]); // M =  m/mj
+//printf(&quot;div\n&quot;);
+xgcd(m1[i], m[i], m2[i], c4, c6); //MM-1 = 1 mod m
+//printf(&quot;xgcd\n&quot;);
+copy(W, M);  //
+}
+
+//计算X
+for (i = 0; i &lt; 3; i++)
+{
+multiply(m1[i], m2[i], c3);
+multiply(c3, a[i], x[i]);  //x = MM-1a +....mod(m)
+add(x[i], X, X);
+}
+
+powmod(X, c5, M, answer);//answer = X^1 mod M
+printf(&quot;answer is:\n&quot;);
+cotnum(answer, stdout); //打印
+mirexit();
+return 0;
+}
+</code></pre>
 <h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><p>判断是否能使用中国剩余定理<br> <img src="https://img-blog.csdnimg.cn/20191027234515762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>求M与M-1<br> <img src="https://img-blog.csdnimg.cn/20191027234523375.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>求解x<br> <img src="https://img-blog.csdnimg.cn/20191027234530802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="实际运行"><a href="#实际运行" class="headerlink" title="实际运行"></a>实际运行</h3><ol>
 <li>互质的<br><img src="https://img-blog.csdnimg.cn/20191027234621273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><ol start="2">
@@ -247,12 +360,20 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
 </ol>
 <p><img src="https://img-blog.csdnimg.cn/20191027234705687.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="P-S-txt数据"><a href="#P-S-txt数据" class="headerlink" title="P.S. txt数据"></a>P.S. txt数据</h3><p>1.txt 不互质</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1703400778910483820422805008255510202952780108580687282406204991102977355497819362037336119731002913846662180847077020740236290693493738835482271882051497287782803150523222405080338334271801792866482004568188646373815031989672512987923656390452397739</span><br><span class="line">2724305591776277437698018538336328525368755596343722369278379045862095348399405909803531445622923586434858075923794289199772931203020662107251938261421134535489303223863021432862007558144614961478557772158790865755237609603854734189485065702894533007</span><br><span class="line">5054062422109780731533257906013120348277952566924151532670827347964065027024283070553070224352222147708139041781535542580186174743209933967784491580267630649415317930613025621277091068103021482556687957739478553608686399952265973926562315865941811106</span><br><span class="line">529012089683106027540972464242844528071743673743373492337127252712791226562406546874415951553948390892712915241165589135143177845694531817071616643290537045923226008758702728170159550568805907850622424020015265726841001559668865110779486144192282420641364473883446730980837401121533551908678272444684</span><br><span class="line">543215757827618377203473258275047104979822158102404878687148537849799550247381564365578590422056394278257158069356234349542268988578552880243969652244111766224512688426426706878276641902193985933655384799228976467016700686667749302166453794272633505983640121880738193066243430412939374407346361018673</span><br><span class="line">910409201715205002347478646685130446423660152260507358434979331439581396068284694915012061028789908792252336550127518559297299352963181057834931040933258962452367236215393076418627949218921266472636232832254258117915197059091231844804196176368468920201615703783443596364327788081668519651744410101292</span><br></pre></td></tr></table></figure>
-
-<p>2.txt 可求结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">8695039453824585971327803091640327439264591005655488011745393293145693657952152999306407259261770227769126705900977747911851437578989508123510979745347100821709337665424897266934977753636498274478498325810960608950295083895917256121194946489862590531</span><br><span class="line">2843586888776659243226129768596946248650199985912875849363349934062940237054802099741704753655572936241294947678141581242450053030988467105995226180947812728014932325811696214659355368088498823535203466513124053882630083938669706033914334272897725827</span><br><span class="line">7823172232329967143253080336216473133559059471949452135263320655253223177876623709115617602222829735561588048570850030793579858516821809715240795109686396100253463538575629486987673937099056108251105593664390258183737270501095307514377495715221620851</span><br><span class="line">116017853623276268534139398907929878877787793651980551492831128460152265817955210396589291631422367361262415115121837412178585592287169858210020969161771830842579745360462792019608011639872984330943977063269966943474772865114131255717447905531474229802532044068660360456893054575436566915238490309883</span><br><span class="line">512447157769228304131256323740835904819759921673225154827094436771226096325013237418054628602994336075764089916228418424306832707597853204209771112842072708289338794604081011427030629039302332957025365167149233660135959038245478352895374943727331531173885009715832998171386546136367093686989913049831</span><br><span class="line">969850455230698192652261474515788687418941545125366868561633605148672698351493104516166153304063487537678627945130392397105464048856577407056079471349982831692582998623711436409450154130174976181809303563157487873504380599234293660083773732553256060917095555110841495582128346683005794423459984157739</span><br></pre></td></tr></table></figure>
-
-
+<pre><code>1703400778910483820422805008255510202952780108580687282406204991102977355497819362037336119731002913846662180847077020740236290693493738835482271882051497287782803150523222405080338334271801792866482004568188646373815031989672512987923656390452397739
+2724305591776277437698018538336328525368755596343722369278379045862095348399405909803531445622923586434858075923794289199772931203020662107251938261421134535489303223863021432862007558144614961478557772158790865755237609603854734189485065702894533007
+5054062422109780731533257906013120348277952566924151532670827347964065027024283070553070224352222147708139041781535542580186174743209933967784491580267630649415317930613025621277091068103021482556687957739478553608686399952265973926562315865941811106
+529012089683106027540972464242844528071743673743373492337127252712791226562406546874415951553948390892712915241165589135143177845694531817071616643290537045923226008758702728170159550568805907850622424020015265726841001559668865110779486144192282420641364473883446730980837401121533551908678272444684
+543215757827618377203473258275047104979822158102404878687148537849799550247381564365578590422056394278257158069356234349542268988578552880243969652244111766224512688426426706878276641902193985933655384799228976467016700686667749302166453794272633505983640121880738193066243430412939374407346361018673
+910409201715205002347478646685130446423660152260507358434979331439581396068284694915012061028789908792252336550127518559297299352963181057834931040933258962452367236215393076418627949218921266472636232832254258117915197059091231844804196176368468920201615703783443596364327788081668519651744410101292
+</code></pre><p>2.txt 可求结果</p>
+<pre><code>8695039453824585971327803091640327439264591005655488011745393293145693657952152999306407259261770227769126705900977747911851437578989508123510979745347100821709337665424897266934977753636498274478498325810960608950295083895917256121194946489862590531
+2843586888776659243226129768596946248650199985912875849363349934062940237054802099741704753655572936241294947678141581242450053030988467105995226180947812728014932325811696214659355368088498823535203466513124053882630083938669706033914334272897725827
+7823172232329967143253080336216473133559059471949452135263320655253223177876623709115617602222829735561588048570850030793579858516821809715240795109686396100253463538575629486987673937099056108251105593664390258183737270501095307514377495715221620851
+116017853623276268534139398907929878877787793651980551492831128460152265817955210396589291631422367361262415115121837412178585592287169858210020969161771830842579745360462792019608011639872984330943977063269966943474772865114131255717447905531474229802532044068660360456893054575436566915238490309883
+512447157769228304131256323740835904819759921673225154827094436771226096325013237418054628602994336075764089916228418424306832707597853204209771112842072708289338794604081011427030629039302332957025365167149233660135959038245478352895374943727331531173885009715832998171386546136367093686989913049831
+969850455230698192652261474515788687418941545125366868561633605148672698351493104516166153304063487537678627945130392397105464048856577407056079471349982831692582998623711436409450154130174976181809303563157487873504380599234293660083773732553256060917095555110841495582128346683005794423459984157739
+</code></pre>
   </article>
   
     
@@ -299,7 +420,7 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1573615481364"></script>
+<script src="/js/app.js?v=1573616268202"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
