@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>java homework4 文件流 - Hexo</title>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="java文件操作">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java homework4 文件流">
+<meta property="og:url" content="http://yoursite.com/2019/11/15/java-homework4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java文件操作">
+<meta property="og:locale" content="en# ��վʹ�õ�����">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004128113.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004140959.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004322227.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004350421.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004430306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004500645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004531535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019111500453920.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004600959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019111500461395.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004617924.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191115004623350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-11-14T16:51:57.980Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java homework4 文件流">
+<meta name="twitter:description" content="java文件操作">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191115004128113.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1573750365743">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="kmm" class="mdui-btn mdui-btn-icon"><img src="/images/avatar.png"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="kmm">
+            <img src="/images/avatar.png" alt="kmm">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>9</div>
+        <div><span>Tags</span>5</div>
+        <div><span>Categories</span>4</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/cryptography/">cryptography</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/java/">java</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/number-theory/">number theory</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/reverse/">reverse</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tagcloud</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/cryptography/" style="font-size: 15px;">cryptography</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/信安数基，中国剩余定理/" style="font-size: 10px;">信安数基，中国剩余定理</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 kmm
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        
+        <h1>java homework4 文件流</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月15日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/java/">java</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/java/">java</a>
+    
+  </div>
+  <article>
+    <!--
+---
+title: postName #文章页面上的显示名称，一般是中文
+date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改
+categories: 默认分类 #分类
+tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格
+description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
+---
+
+以下是正文
+-->
+
+<h1 id="java-homework4-文件流"><a href="#java-homework4-文件流" class="headerlink" title="java homework4 文件流"></a>java homework4 文件流</h1><blockquote>
+<p>Assignment<br>java上机作业4 题目见内容</p>
+</blockquote>
+<blockquote>
+<p>environment: idea2017 jdk1.8</p>
+</blockquote>
+<a id="more"></a>
+
+<p>@<a href="软件逆向工程-dll消息钩取">TOC</a></p>
+<h1 id="JAVA实验-文件流操作"><a href="#JAVA实验-文件流操作" class="headerlink" title="JAVA实验 文件流操作"></a>JAVA实验 文件流操作</h1><h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><blockquote>
+<p>8-2<br>实现一个程序，该程序的输人是一个目录字符串和一个文件扩展名字符串，程序递归地搜索该目录及其各级子目录，在这些目录中查找所有扩展名与指定扩展名相同的文件，将这些文件的相对路径名记录下来并向控制台输出。</p>
+</blockquote>
+<blockquote>
+<p>8-7<br>    实现两个程序，第一个程序读入一个文件plain.txt将读入的每个字节的数值加5,然后输出到另一个文件cipher.ixt中，第二个程序从cipher.txt中读取每个字节，将每个字节的数值减5.再输出到文件decrypt.txt中。比较plain.txt与decrypt.txt的内容。</p>
+</blockquote>
+<h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h2><p>idea2017 jdk1.8</p>
+<!--more-->
+
+<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><p>8-2<br>本题最关键的就是如何使用递归实现finFile方法（寻找路径下对应后缀名）<br> <img src="https://img-blog.csdnimg.cn/20191115004128113.png" alt="在这里插入图片描述"><br>需要三个参数<br>File path,String name ,int len<br>Path：寻找的路径<br>Name：文件的后缀名<br>Len：寻找的路径的字符串长度（用于最后输出相对路径服务）<br> <img src="https://img-blog.csdnimg.cn/20191115004140959.png" alt="在这里插入图片描述"><br>这两句实现了遍历寻找文件<br> <img src="https://img-blog.csdnimg.cn/20191115004322227.png" alt="在这里插入图片描述"><br>路径下存在文件或者下一级目录，文件使用目录判断后缀名是否符合要求，若为目录则递归进入寻找。</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>在E:\111中寻找txt文件<br><img src="https://img-blog.csdnimg.cn/20191115004350421.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191115004430306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1123目录<br> <img src="https://img-blog.csdnimg.cn/20191115004500645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看出路径下的所有txt都被找出，不管是根目录还是子目录中</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code class="java">//java homework 8.2 寻找目录下的指定扩展名的文件
+import java.io.*;
+import java.util.Scanner;
+
+public class homework82{
+    public static void findFile(File path,String name ,int len){
+
+        if(path.isDirectory())
+        {
+            File[] files = path.listFiles();//listFiles()  listFiles()方法是返回某个目录下所有文件和目录的绝对路径，返回的是File数组
+            for(File file:files)//遍历路径下的文件
+            {
+                if(file.isFile()) {//只判断文件
+                    String fileName = file.getName();
+                    String extension = fileName.substring(fileName.lastIndexOf(&quot;.&quot;) + 1);//截取文件后缀 substring() 方法用于提取字符串中介于两个指定下标之间的字符 一个参数只选最后一个.之后
+                    if (extension.equals(name)) {
+                        System.out.println(&quot;find file: &quot; + &quot;相对路径 .\\&quot; + file.getPath().substring(len + 1));
+                        //System.out.println(fileName + &quot;   :   .\\&quot; + file.getPath().substring(len + 1));//获取相对路径
+                    }
+                }
+                    else{
+                        findFile(file,name,len);//递归
+                    }
+            }
+        }
+        else{
+            System.out.println(&quot;it is not a Directory.&quot;);
+        }
+
+    }
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.print(&quot;搜索路径名：&quot;);
+        String str = in.nextLine();
+        File path = new File(str );
+        System.out.println(&quot;文件路径:&quot;+str);
+
+        in = new Scanner(System.in);
+        System.out.print(&quot;文件后缀：&quot;);
+        str = in.nextLine();
+        String extension =  new String(str);
+        System.out.println(&quot;后缀名&quot;+str);
+
+        int len = path.getPath().length();
+        findFile(path,extension,len);
+    }
+
+}</code></pre>
+<h2 id="8-7"><a href="#8-7" class="headerlink" title="8-7"></a>8-7</h2><p>这一题需要实现两个程序，一个程序用于加密文件（移位加密）<br>一个程序用于解密与验证。<br> <img src="https://img-blog.csdnimg.cn/20191115004531535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>加密部分代码，参考课本p171代码，依次从plain.txt读取c，给c位移5，然后写入到cipher.txt<br> <img src="https://img-blog.csdnimg.cn/2019111500453920.png" alt="在这里插入图片描述"><br>解密部分代码，参考课本p171代码，依次从cipher.txt读取c，给c位移-5，然后写入到decrypt.txt<br> <img src="https://img-blog.csdnimg.cn/20191115004600959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>验证部分,同理依次读取plain.txt和decrypt.txt的字符进行比较，相同则过程正确。<br>结果<br>加密<br> <img src="https://img-blog.csdnimg.cn/2019111500461395.png" alt="在这里插入图片描述"><br>解密与验证<br> <img src="https://img-blog.csdnimg.cn/20191115004617924.png" alt="在这里插入图片描述"><br>查看实际文件变化<br> <img src="https://img-blog.csdnimg.cn/20191115004623350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI2MjE5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><pre><code class="java">//java homework 8.7 加密解密文件 并且判断加解密后是否相同
+
+import java.io.*;
+import java.util.Scanner;
+//参考课本p171代码
+public class homework87 {
+    public static void main(String args[])throws IOException
+    {
+        FileInputStream in = new FileInputStream(&quot;E:\\111\\plain.txt&quot;);
+        FileOutputStream out = new FileOutputStream(&quot;E:\\111\\cipher.txt&quot;);
+        int c;
+        while( (c = in.read()) != -1){
+           out.write(c+5);
+        }
+        in.close();
+        out.close();
+        System.out.println(&quot;encry successfully&quot;);
+    }
+}</code></pre>
+<pre><code class="java">//java homework 8.7 加密解密文件 并且判断加解密后是否相同
+
+import java.io.*;
+import java.util.Scanner;
+//参考课本p171代码
+public class homework87_2{
+    public static void main(String args[])throws IOException
+    {
+        FileInputStream in = new FileInputStream(&quot;E:\\111\\cipher.txt&quot;);
+        FileOutputStream out = new FileOutputStream(&quot;E:\\111\\decrypt.txt&quot;);
+        int c;
+        while( (c = in.read()) != -1){
+            out.write(c-5);
+        }
+        in.close();
+        out.close();
+        System.out.println(&quot;decry successfully&quot;);
+
+        FileInputStream plain = new FileInputStream(&quot;E:\\111\\plain.txt&quot;);
+        FileInputStream decrypt = new FileInputStream(&quot;E:\\111\\decrypt.txt&quot;);
+        int m1,m2;
+        int flag = 0;
+        while( (m1 = plain.read()) != -1){
+            if( (m2 = decrypt.read()) != -1){
+                if(m1 == m2){
+                    flag = 1;
+                    continue;
+                }
+                else{
+                    System.out.println(&quot;different&quot;);
+                    flag = 0;
+                    break;
+                }
+            }
+            else {
+                System.out.println(&quot;different&quot;);
+                flag = 0;
+                break;
+            }
+        }
+        if(flag == 1){
+            System.out.println(&quot;same&quot;);
+        }
+
+        plain.close();
+        decrypt.close();
+        //p判断是否相同
+    }
+}</code></pre>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>kmm<br>
+<strong>Link：</strong><a href="http://yoursite.com/2019/11/15/java-homework4/" title="http://yoursite.com/2019/11/15/java-homework4/" target="_blank" rel="noopener">http://yoursite.com/2019/11/15/java-homework4/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1573750365761"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
